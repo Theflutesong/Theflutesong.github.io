@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="笛子轻吟">
+    <meta name="keywords" content="分类: js, 笛子轻吟">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>笛子轻吟</title>
+    <title>分类: js | 笛子轻吟</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -221,56 +221,9 @@
 
 </header>
 
-    
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-
-    <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
@@ -307,225 +260,56 @@
 </script>
 
 
-
-            <div class="cover-btns">
-                <a href="#articles" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-                    <a href="https://www.baidu.com/" class="waves-effect waves-light btn" target="_blank">
-                        <i class="fab fa-github-alt"></i>百度
-                    </a>
-                
-            </div>
-            <div class="cover-social-link">
-
-
-    <a href="mailto:284449352@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=284449352" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 284449352" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-    <a href="https://www.zhihu.com/people/ke-meng-9-65" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/ke-meng-9-65" data-position="top" data-delay="50">
-        <i class="fab fa-zhihu1">知</i>
-    </a>
-
-
-
-</div>
-        </div>
     </div>
-
-    
 </div>
-
-<script>
-    $(function () {
-        let coverSlider = $('.carousel');
-
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
-        }
-
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'true' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
-
-        let carouselIntervalId;
-        
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
-
-        function restartPlay() {
-            
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
-        };
-
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
-        
-    });
-</script>
-
-
 
 <main class="content">
 
     
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;名言
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            当一切似乎毫无希望时，我看着切石工人在他的石头上，敲击了上百次，而不见任何裂痕出现。但在第一百零一次时，石头被劈成两半。我体会到，到，并非那一击，而是前面的敲打使它裂开。——贾柯·瑞斯
-        </div>
-    </div>
-</div>
 
-                    
-
-                    
-                        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="music-player">
-    
-        <div class="title center-align">
-            <i class="fas fa-music"></i>&nbsp;&nbsp;热门音乐
-        </div>
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="song"
-                   id="1330348068"
-                   fixed='false'
-                   autoplay='true'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-                        
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-                    </div>
-                    
-                </div>
+<div id="category-cloud" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
+            </div>
+            <div class="tag-chips">
+                
+                
+                
+                <a href="/categories/%E5%BC%80%E5%A7%8B/" title="开始: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F9EBEA;">开始
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/js/" title="js: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            style="background-color: #F5EEF8;">js
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
             </div>
         </div>
     </div>
-    
+</div>
+
 
     
 
-    <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
-        <div class="row article-row">
+        <div class="row tags-posts">
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2021/01/17/javascript%E5%85%A5%E9%97%A8/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="javascript start">
@@ -533,7 +317,6 @@
                             <span class="card-title">javascript start</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -575,115 +358,8 @@
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/01/15/hello/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/6.png" class="responsive-img" alt="第一篇博客">
-                            
-                            <span class="card-title">第一篇博客</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                这是一个测试博客测试一   文字测试   博客是用hexo博客框架搭建而成，主题作者Matery
-
-测试二   代码测试   1&lt;p&gt;hello word&lt;/p&gt;
-测试三   文本测试
-我是一个独立的文本
-
-
-我又是
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-15
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%BC%80%E5%A7%8B/" class="post-category">
-                                    开始
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%BC%80%E5%A7%8B/">
-                            <span class="chip bg-color">开始</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/01/14/hello-world/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="hexo使用说明">
-                            
-                            <span class="card-title">hexo使用说明</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                快速入门创建一个新的post1$ hexo new &quot;My New Post&quot;
-更多请看： 写法
-运行服务器1$ hexo server
-更多请看: 服务器
-生成静态文件1$ hexo generate
-更多请看: 生成
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-14
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%BC%80%E5%A7%8B/" class="post-category">
-                                    开始
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%BC%80%E5%A7%8B/">
-                            <span class="chip bg-color">开始</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
         </div>
     </article>
-
 </main>
 
 
