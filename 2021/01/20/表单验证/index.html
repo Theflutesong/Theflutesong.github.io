@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="javascript总结三, 笛子轻吟">
+    <meta name="keywords" content="表单验证, 笛子轻吟">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>javascript总结三 | 笛子轻吟</title>
+    <title>表单验证 | 笛子轻吟</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -225,12 +225,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">javascript总结三</h1>
+                    <h1 class="description center-align post-title">表单验证</h1>
                 </div>
             </div>
         </div>
@@ -392,30 +392,13 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="大总结三"><a href="#大总结三" class="headerlink" title="大总结三"></a>大总结三</h1><h2 id="一，for循环"><a href="#一，for循环" class="headerlink" title="一，for循环"></a>一，for循环</h2><blockquote>
-<p>写法：for(初始变量：表达式1；表达式2){<br>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  内容<br>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                <h1 id="表单验证"><a href="#表单验证" class="headerlink" title="表单验证"></a>表单验证</h1><blockquote>
+<p>先看一个实例</p>
 </blockquote>
-<h3 id="1，练习"><a href="#1，练习" class="headerlink" title="1，练习"></a>1，练习</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var i = <span class="string">&#x27;&#x27;</span> ;</span><br><span class="line"><span class="keyword">for</span> ( j = 1 ; j &lt;= 20 ; j++)&#123;</span><br><span class="line">    console.log(<span class="string">&#x27;这是一个测试文本&#x27;</span> + j);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2，打印星星"><a href="#2，打印星星" class="headerlink" title="2，打印星星"></a>2，打印星星</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var a=<span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="keyword">for</span>(var i = 0; i &lt; 5;i++)&#123;</span><br><span class="line">    a += <span class="string">&#x27;⭐&#x27;</span>;</span><br><span class="line">    // console.log(a);打印三角形</span><br><span class="line">&#125;</span><br><span class="line">console.log(a);一行打印5个数</span><br></pre></td></tr></table></figure>
-<h3 id="3，打印5行5列的星星"><a href="#3，打印5行5列的星星" class="headerlink" title="3，打印5行5列的星星"></a>3，打印5行5列的星星</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var a = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">  <span class="keyword">for</span>(var i = 0; i &lt; 5; i++)&#123;</span><br><span class="line">      <span class="keyword">for</span>(var j = 1; j &lt;= 5;j++)&#123;</span><br><span class="line">          a = a + <span class="string">&#x27;⭐&#x27;</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(j = 5)&#123;</span><br><span class="line">          a = a + <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  console.log(a);</span><br></pre></td></tr></table></figure>
-
+<h2 id="body部分"><a href="#body部分" class="headerlink" title="body部分"></a>body部分</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 表单验证 --&gt;</span><br><span class="line">    &lt;form action=<span class="string">&#x27;demo-form.php&#x27;</span>  name = <span class="string">&#x27;myfname&#x27;</span> onsubmit=<span class="string">&#x27;return myfunction()&#x27;</span>&gt;</span><br><span class="line">    姓名&lt;input <span class="built_in">type</span>=<span class="string">&quot;text&quot;</span> name=<span class="string">&quot;name&quot;</span>&gt;</span><br><span class="line">    表格&lt;input <span class="built_in">type</span>=<span class="string">&quot;button&quot;</span> value=<span class="string">&quot;按钮&quot;</span> onclick=<span class="string">&quot;myfunction()&quot;</span>&gt;</span><br><span class="line">    &lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="script部分"><a href="#script部分" class="headerlink" title="script部分"></a>script部分</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    function  myfunction()&#123;</span><br><span class="line">        var x &#x3D; document.forms[&#39;myfname&#39;][&#39;name&#39;].value;</span><br><span class="line">        if(x &#x3D; null || x &#x3D;&#x3D; &#39;&#39;)&#123;</span><br><span class="line">            alert(&#39;请输入你所需要输入的内容&#39;);</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>利用双重<code>for()</code>循环，加上<code>if()</code>判断实现，5行5列的星星</p>
-</blockquote>
-<h3 id="二，switch选择语句"><a href="#二，switch选择语句" class="headerlink" title="二，switch选择语句"></a>二，switch选择语句</h3><h4 id="今天有没有放假实例"><a href="#今天有没有放假实例" class="headerlink" title="今天有没有放假实例"></a>今天有没有放假实例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var b = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">var c =new Date();</span><br><span class="line">var b1 = c.getDay();</span><br><span class="line">console.log(b1);</span><br><span class="line">switch(b1)&#123;</span><br><span class="line">    <span class="keyword">case</span> 6:</span><br><span class="line">        b = <span class="string">&#x27;今天放假啦&#x27;</span></span><br><span class="line">        <span class="built_in">break</span>;</span><br><span class="line">    <span class="keyword">case</span> 7:</span><br><span class="line">        b = <span class="string">&#x27;今天放假啦&#x27;</span></span><br><span class="line">        <span class="built_in">break</span>;</span><br><span class="line">    default:</span><br><span class="line">        b = <span class="string">&#x27;今天没有放假&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line">alert(b);</span><br></pre></td></tr></table></figure>
-<h3 id="三，while-以及-do-while-语句"><a href="#三，while-以及-do-while-语句" class="headerlink" title="三，while 以及 do while 语句"></a>三，while 以及 do while 语句</h3><blockquote>
-<p><code>while</code>先判断后执行循环</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = 0;</span><br><span class="line"><span class="keyword">while</span>(a &lt;= 5)&#123;</span><br><span class="line">    console.log(<span class="string">&#x27;这是第&#x27;</span>+ a +<span class="string">&#x27;天&#x27;</span>);</span><br><span class="line">    a++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p> <code>do while</code> 先执行一次循环再进行判断</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = 0;</span><br><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    a++;</span><br><span class="line">    console.log(<span class="string">&#x27;今天是第&#x27;</span>+ a +<span class="string">&#x27;天&#x27;</span>);</span><br><span class="line">&#125;<span class="keyword">while</span>(a &lt;= 5)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><code>while()</code> 括号内始终跟判断</p>
-</blockquote>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><blockquote>
-<p>   <code>break</code> 直接中断当前的语句  （中断循环）<br>   <code>continue</code> 跳过当前循环执行下一句   （跳过循环）</p>
+<p>例子非常简单</p>
 </blockquote>
 
                 
@@ -443,7 +426,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/01/20/javascript3/">http://example.com/2021/01/20/javascript3/</a>
+                    <a href="http://example.com/2021/01/20/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/">http://example.com/2021/01/20/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -652,9 +635,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/01/20/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/">
                     <div class="card-image">
@@ -672,9 +656,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -687,6 +671,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -705,13 +690,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/19/javascript2/">
+                <a href="/2021/01/20/javascript3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="javascript总结二">
+                        <img src="/medias/featureimages/4.png" class="responsive-img" alt="javascript总结三">
                         
-                        <span class="card-title">javascript总结二</span>
+                        <span class="card-title">javascript总结三</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -722,7 +707,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-20
                             </span>
                         <span class="publish-author">
                             
