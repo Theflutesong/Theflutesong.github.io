@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="表单验证, 笛子轻吟">
+    <meta name="keywords" content="javascript总结四, 笛子轻吟">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>表单验证 | 笛子轻吟</title>
+    <title>javascript总结四 | 笛子轻吟</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -230,7 +230,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">表单验证</h1>
+                    <h1 class="description center-align post-title">javascript总结四</h1>
                 </div>
             </div>
         </div>
@@ -371,7 +371,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-20
+                    2021-01-22
                 </div>
                 
 
@@ -392,13 +392,26 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="表单验证"><a href="#表单验证" class="headerlink" title="表单验证"></a>表单验证</h1><blockquote>
-<p>先看一个实例</p>
-</blockquote>
-<h2 id="body部分"><a href="#body部分" class="headerlink" title="body部分"></a>body部分</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 表单验证 --&gt;</span><br><span class="line">    &lt;form action=<span class="string">&#x27;demo-form.php&#x27;</span>  name = <span class="string">&#x27;myfname&#x27;</span> onsubmit=<span class="string">&#x27;return myfunction()&#x27;</span>&gt;</span><br><span class="line">    姓名&lt;input <span class="built_in">type</span>=<span class="string">&quot;text&quot;</span> name=<span class="string">&quot;name&quot;</span>&gt;</span><br><span class="line">    表格&lt;input <span class="built_in">type</span>=<span class="string">&quot;button&quot;</span> value=<span class="string">&quot;按钮&quot;</span> onclick=<span class="string">&quot;myfunction()&quot;</span>&gt;</span><br><span class="line">    &lt;/form&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="script部分"><a href="#script部分" class="headerlink" title="script部分"></a>script部分</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    function  myfunction()&#123;</span><br><span class="line">        var x &#x3D; document.forms[&#39;myfname&#39;][&#39;name&#39;].value;</span><br><span class="line">        if(x &#x3D; null || x &#x3D;&#x3D; &#39;&#39;)&#123;</span><br><span class="line">            alert(&#39;请输入你所需要输入的内容&#39;);</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+                <h1 id="大总结四"><a href="#大总结四" class="headerlink" title="大总结四"></a>大总结四</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><h3 id="给定一个数组-1-2-3-4-5-要求翻转数组"><a href="#给定一个数组-1-2-3-4-5-要求翻转数组" class="headerlink" title="给定一个数组[1,2,3,4,5] 要求翻转数组"></a><font color = pink>给定一个数组[1,2,3,4,5] 要求翻转数组</font></h3><br>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var res = [10,9,7,1,20];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(var i=0;i &lt; res.length - 1;i++)&#123; //比较的轮数</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>( var j = 0; j &lt; res.length - 1 -i;j++)&#123; //比较的次数，每一轮选择一个最大数放在数组比较的末尾，比较的次数减去轮数；</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(res[j] &gt; res[j+1])&#123;</span><br><span class="line">                var tem = res[j];</span><br><span class="line">                res [j] = res [j+1];</span><br><span class="line">                res[j + 1] = tem;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    console.log(res);</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>例子非常简单</p>
+<p><b>第一层循环，循环的是轮数</b>  &nbsp;&nbsp;&nbsp;&nbsp; <del>只要开始比较就算轮数</del></p>
+</blockquote>
+<blockquote>
+<p><b>第二层循环，循环的是比较的次数</b>  &nbsp;&nbsp;&nbsp;&nbsp;  <del>在每一轮开始比较的轮数中，除去最大数，其余的数进行比较</del></p>
+</blockquote>
+<h2 id="创建新数组"><a href="#创建新数组" class="headerlink" title="创建新数组"></a>创建新数组</h2><h3 id="第一种方法"><a href="#第一种方法" class="headerlink" title="第一种方法"></a>第一种方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var s&#x3D;new Array(); </span><br><span class="line">s[0] &#x3D; 1;</span><br><span class="line">s[1] &#x3D; 2;</span><br><span class="line">console.log(s);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>new Array()直接建立新数组</p>
+</blockquote>
+<h3 id="第二种方法"><a href="#第二种方法" class="headerlink" title="第二种方法"></a>第二种方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var s&#x3D;new Array(2);</span><br><span class="line">s[0] &#x3D; 1;</span><br><span class="line">console.log(s);</span><br><span class="line"></span><br><span class="line">var s&#x3D;new Array(1,2,3);</span><br><span class="line">console.log(s);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>new Array()规定数组长度  或者直接赋值</p>
+</blockquote>
+<h3 id="第三种方法"><a href="#第三种方法" class="headerlink" title="第三种方法"></a>第三种方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var s&#x3D;[1,2,3,5];</span><br><span class="line"> console.log(s);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>直接赋值</p>
 </blockquote>
 
                 
@@ -426,7 +439,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/01/20/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/">http://example.com/2021/01/20/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/</a>
+                    <a href="http://example.com/2021/01/22/javascript4/">http://example.com/2021/01/22/javascript4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -635,9 +648,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/01/22/javascript4/">
                     <div class="card-image">
@@ -655,9 +669,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -670,6 +684,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -688,13 +703,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/20/javascript3/">
+                <a href="/2021/01/20/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.png" class="responsive-img" alt="javascript总结三">
+                        <img src="/medias/featureimages/2.png" class="responsive-img" alt="表单验证">
                         
-                        <span class="card-title">javascript总结三</span>
+                        <span class="card-title">表单验证</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
