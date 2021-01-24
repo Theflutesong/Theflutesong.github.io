@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="javascript start, 笛子轻吟">
+    <meta name="keywords" content="对于Date()的一些案例, 笛子轻吟">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>javascript start | 笛子轻吟</title>
+    <title>对于Date()的一些案例 | 笛子轻吟</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -225,12 +225,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">javascript start</h1>
+                    <h1 class="description center-align post-title">对于Date()的一些案例</h1>
                 </div>
             </div>
         </div>
@@ -371,7 +371,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-17
+                    2021-01-24
                 </div>
                 
 
@@ -392,29 +392,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><blockquote>
-<p> js是一种具有函数优先的轻量级，解释型或者编译型的编程语言</p>
+                <h1 id="关于date-的一些案例"><a href="#关于date-的一些案例" class="headerlink" title="关于date()的一些案例"></a>关于<font color=red>date()</font>的一些案例</h1><h2 id="一-获取"><a href="#一-获取" class="headerlink" title="一.获取"></a>一.获取</h2><h3 id="1-获取当前的时间"><a href="#1-获取当前的时间" class="headerlink" title="1,获取当前的时间"></a>1,获取当前的时间</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var date &#x3D; new Date();</span><br><span class="line">console.log(date);</span><br></pre></td></tr></table></figure>
+<h3 id="2-获取当前的日期"><a href="#2-获取当前的日期" class="headerlink" title="2,获取当前的日期"></a>2,获取当前的日期</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var day &#x3D; new Date().getDate();</span><br><span class="line">console.log(day);</span><br></pre></td></tr></table></figure>
+<h3 id="3-获取当前的月份"><a href="#3-获取当前的月份" class="headerlink" title="3,获取当前的月份"></a>3,获取当前的月份</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var month &#x3D; new Date().getMonth();</span><br><span class="line">console.log(month);&#x2F;&#x2F;返回月份是从0-11月分，所以使用时得加1 </span><br></pre></td></tr></table></figure>
+<h3 id="4，返回当前的小时"><a href="#4，返回当前的小时" class="headerlink" title="4，返回当前的小时"></a>4，返回当前的小时</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var hours &#x3D; new Date().getHours();</span><br><span class="line">console.log(hours);</span><br></pre></td></tr></table></figure>
+<h2 id="二，时间戳"><a href="#二，时间戳" class="headerlink" title="二，时间戳"></a>二，时间戳</h2><blockquote>
+<p>时间戳，表示一份数据在某个特定时间之前已经存在的、 完整的、 可验证的数据。</p>
 </blockquote>
 <blockquote>
-<p> js基于原型编程，多范式的动态脚本语言，并且支持面向对象，命令式和声明式（如函数式编程）风格</p>
+<p>时间戳是指格林威治时间1970年01月01日00时00分00秒(北京时间1970年01月01日08时00分00秒)起至现在的总秒数</p>
 </blockquote>
-<h2 id="基础入门-hello-world"><a href="#基础入门-hello-world" class="headerlink" title="基础入门 hello world"></a>基础入门 hello world</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    alert(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 或者</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    console.log(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>这里需要强调的是，每一行代码之后都要紧接分号。</p>
-</blockquote>
-<h2 id="javascript-用法"><a href="#javascript-用法" class="headerlink" title="javascript 用法"></a>javascript 用法</h2><blockquote>
-<p>使用js开始时应把代码放置在 <code>&lt;script&gt;&lt;/script&gt;</code>中.<br>&nbsp;脚本可悲放置在HTML页面的<code>&lt;body&gt;</code>和<code>&lt;head&gt;</code>部分中.</p>
-</blockquote>
-<h2 id="javascript的函数事件"><a href="#javascript的函数事件" class="headerlink" title="javascript的函数事件"></a>javascript的函数事件</h2><blockquote>
-<p>上述例子会在加载页面时执行，通常，我们在某一个事件发生时执行代码，例如：鼠标滑动又或者点击按钮，如果把js放置在函数中时，则会在函数发生时调用该函数,例子如下，大家可以尝试一下</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">function</span> myFunction()</span><br><span class="line">&#123;</span><br><span class="line">    document.getElementById(<span class="string">&quot;demo&quot;</span>).innerHTML=<span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;h1&gt;笛子轻吟&lt;/h1&gt;</span><br><span class="line">&lt;p id=<span class="string">&quot;demo&quot;</span>&gt;轻吟博客&lt;/p&gt;</span><br><span class="line">&lt;button <span class="built_in">type</span>=<span class="string">&quot;button&quot;</span> onclick=<span class="string">&quot;myFunction()&quot;</span>&gt;点我&lt;/button&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>其中<code>onclick()</code>为点击事件，点击之后执行函数<code>myFunction()</code></p>
-</blockquote>
+<h3 id="获取时间戳的几种方法"><a href="#获取时间戳的几种方法" class="headerlink" title="获取时间戳的几种方法"></a>获取时间戳的几种方法</h3><h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var time1 &#x3D; +new Date();</span><br><span class="line">console.log(time1);</span><br></pre></td></tr></table></figure>
+<h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var time2 &#x3D; new Date();</span><br><span class="line">console.log(time2.getTime());</span><br></pre></td></tr></table></figure>
+<h4 id="3-H5新增"><a href="#3-H5新增" class="headerlink" title="3,H5新增"></a>3,H5新增</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">console.log(Date.now());</span><br></pre></td></tr></table></figure>
 
+<h2 id="三，倒计时案例"><a href="#三，倒计时案例" class="headerlink" title="三，倒计时案例"></a>三，倒计时案例</h2><h3 id="计算时间的方法"><a href="#计算时间的方法" class="headerlink" title="计算时间的方法"></a>计算时间的方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">parseInt(总秒数&#x2F;60&#x2F;60&#x2F;24);&#x2F;&#x2F;计算天数</span><br><span class="line"></span><br><span class="line">parseInt(总秒数&#x2F;60&#x2F;60%24);&#x2F;&#x2F;计算小时</span><br><span class="line"></span><br><span class="line">parseInt(总秒数&#x2F;60%60);&#x2F;&#x2F;计算分数</span><br><span class="line"></span><br><span class="line">parseInt(总秒数%60);&#x2F;&#x2F;计算秒数</span><br><span class="line"></span><br><span class="line">parseInt()&#x2F;&#x2F;取整</span><br></pre></td></tr></table></figure>
+<h3 id="倒计时"><a href="#倒计时" class="headerlink" title="倒计时"></a>倒计时</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function tm(time)&#123;</span><br><span class="line">    var time1 &#x3D; +new Date();</span><br><span class="line">    var time2 &#x3D; +new Date(time);</span><br><span class="line">    var time3 &#x3D; (time2 - time1) &#x2F; 1000;</span><br><span class="line">    var time4 &#x3D; parseInt(time3 &#x2F; 60 &#x2F;60 &#x2F;24);</span><br><span class="line">    var time5 &#x3D; parseInt(time3&#x2F;60&#x2F;60%24);</span><br><span class="line">    var time6 &#x3D; parseInt(time3&#x2F;60%60);</span><br><span class="line">    var time7 &#x3D; parseInt(time3&#x2F;60%60);</span><br><span class="line"></span><br><span class="line">    return time4 + &#39;天&#39; + time5 + &#39;时&#39; + time6 + &#39;分&#39; + time7 + &#39;秒&#39;</span><br><span class="line">&#125;</span><br><span class="line">console.log(tm(&#39;2021-1-1 00:00:00&#39;));</span><br></pre></td></tr></table></figure>
                 
             </div>
             <hr/>
@@ -440,7 +433,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/01/17/javascript%E5%85%A5%E9%97%A8/">http://example.com/2021/01/17/javascript%E5%85%A5%E9%97%A8/</a>
+                    <a href="http://example.com/2021/01/24/javascript7/">http://example.com/2021/01/24/javascript7/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -649,17 +642,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/01/18/javascript/">
+                <a href="/2021/01/24/javascript7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="javascript总结一">
+                        <img src="/medias/featureimages/2.png" class="responsive-img" alt="对于Date()的一些案例">
                         
-                        <span class="card-title">javascript总结一</span>
+                        <span class="card-title">对于Date()的一些案例</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -669,9 +663,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -684,6 +678,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -702,13 +697,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/15/hello/">
+                <a href="/2021/01/23/javascript6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="第一篇博客">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="math的数学变量">
                         
-                        <span class="card-title">第一篇博客</span>
+                        <span class="card-title">math的数学变量</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -719,14 +714,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%BC%80%E5%A7%8B/" class="post-category">
-                                    开始
+                            <a href="/categories/js/" class="post-category">
+                                    js
                                 </a>
                             
                             
@@ -736,8 +731,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BC%80%E5%A7%8B/">
-                        <span class="chip bg-color">开始</span>
+                    <a href="/tags/js/">
+                        <span class="chip bg-color">js</span>
                     </a>
                     
                 </div>
