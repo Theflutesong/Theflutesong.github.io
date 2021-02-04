@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="jQuery后代遍历, 笛子轻吟">
+    <meta name="keywords" content="改变内容和属性, 笛子轻吟">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>jQuery后代遍历 | 笛子轻吟</title>
+    <title>改变内容和属性 | 笛子轻吟</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -225,12 +225,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">jQuery后代遍历</h1>
+                    <h1 class="description center-align post-title">改变内容和属性</h1>
                 </div>
             </div>
         </div>
@@ -371,7 +371,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-01
+                    2021-02-04
                 </div>
                 
 
@@ -392,22 +392,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一，children-遍历"><a href="#一，children-遍历" class="headerlink" title="一，children()遍历"></a>一，children()遍历</h1><blockquote>
-<p><code>clildren()</code>方法返回被选元素的所有直接子元素</p>
+                <h1 id="html-text-和val"><a href="#html-text-和val" class="headerlink" title="html(),text()和val()"></a>html(),text()和val()</h1><blockquote>
+<p><code>html(带参数)</code>可以连带标签一起修改</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.staticfile.org&#x2F;jquery&#x2F;1.10.2&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        $(document).ready(function()&#123;</span><br><span class="line">            $(&#39;#one&#39;).children().css(&#39;border&#39;,&#39;1px solid red&#39;)</span><br><span class="line">        &#125;);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">         #two *&#123;</span><br><span class="line">            color: lightgray;</span><br><span class="line">            margin: 15px;</span><br><span class="line">            padding: 5px;</span><br><span class="line">            display: block;</span><br><span class="line">            border: 2px solid lightgray;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;two&quot;&gt; </span><br><span class="line"></span><br><span class="line">        &lt;div id&#x3D;&quot;one&quot; style&#x3D;&quot;width: 500px;&quot;&gt;</span><br><span class="line">            div(曾祖父元素)</span><br><span class="line">            &lt;ul&gt;ul(祖父元素)</span><br><span class="line">                &lt;li&gt;li(父元素)</span><br><span class="line">                    &lt;span&gt;span(子元素)&lt;&#x2F;span&gt;</span><br><span class="line">                &lt;&#x2F;li&gt;</span><br><span class="line">            &lt;&#x2F;ul&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-<h1 id="二，children-带参数"><a href="#二，children-带参数" class="headerlink" title="二，children(带参数)"></a>二，children(带参数)</h1><blockquote>
-<p><code>chlidren(&#39;参数&#39;)</code>,文中所指的是返回所有p标签的class为1的属性</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">.descendants *</span><br><span class="line">&#123; </span><br><span class="line">	display: block;</span><br><span class="line">	border: 2px solid lightgrey;</span><br><span class="line">	color: lightgrey;</span><br><span class="line">	padding: 5px;</span><br><span class="line">	margin: 15px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.staticfile.org&#x2F;jquery&#x2F;1.10.2&#x2F;jquery.min.js&quot;&gt;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">$(document).ready(function()&#123;</span><br><span class="line">  $(&quot;div&quot;).children(&quot;p.1&quot;).css(&#123;&quot;color&quot;:&quot;red&quot;,&quot;border&quot;:&quot;2px solid red&quot;&#125;);</span><br><span class="line">&#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class&#x3D;&quot;descendants&quot; style&#x3D;&quot;width:500px;&quot;&gt;div (当前元素) </span><br><span class="line">  &lt;p class&#x3D;&quot;1&quot;&gt;p (儿子元素)</span><br><span class="line">    &lt;span&gt;span (孙子元素)&lt;&#x2F;span&gt;     </span><br><span class="line">  &lt;&#x2F;p&gt;</span><br><span class="line">  &lt;p class&#x3D;&quot;2&quot;&gt;p (儿子元素)</span><br><span class="line">    &lt;span&gt;span (孙子元素)&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;&#x2F;p&gt; </span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-<h1 id="三，find"><a href="#三，find" class="headerlink" title="三，find()"></a>三，find()</h1><blockquote>
-<p><code>find()</code>元素，直接查找元素</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.staticfile.org&#x2F;jquery&#x2F;1.10.2&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        $(document).ready(function()&#123;</span><br><span class="line">            $(&#39;.one&#39;).find(&#39;span&#39;).css(&#123;</span><br><span class="line">                &#39;border&#39;:&#39;2px solid red&#39;,</span><br><span class="line">                &#39;color&#39;:&#39;red&#39;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        .one *&#123;</span><br><span class="line">            display: block;</span><br><span class="line">            border: 2px solid lightgray;</span><br><span class="line">            margin: 2px;</span><br><span class="line">            padding: 10px;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;one&quot;&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;p&gt;</span><br><span class="line">                &lt;span&gt;我会被选中&lt;&#x2F;span&gt;</span><br><span class="line">            &lt;&#x2F;p&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>大家有兴趣可以自己练习一下上面的案例。</p>
+<p><code>text(带参数)</code>只能修改内容，不能修改照片</p>
 </blockquote>
-
+<blockquote>
+<p><code>val(带参数)</code>修改是标签内部的value属性</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.staticfile.org&#x2F;jquery&#x2F;1.10.2&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        $(document).ready(function()&#123;</span><br><span class="line">            $(&#39;#four&#39;).click(function()&#123;</span><br><span class="line">                $(&#39;#one&#39;).text(&#39;我是大帅哥&#39;);</span><br><span class="line">            &#125;);</span><br><span class="line">            $(&#39;#five&#39;).click(function()&#123;</span><br><span class="line">                $(&#39;#two&#39;).html(&#39;&lt;b&gt;我是大帅哥&lt;&#x2F;b&gt;&#39;);</span><br><span class="line">            &#125;);</span><br><span class="line">            $(&#39;#six&#39;).click(function()&#123;</span><br><span class="line">                $(&#39;#text&#39;).val(&#39;我是大帅哥&#39;);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        button&#123;</span><br><span class="line">            outline: 0;</span><br><span class="line">            margin-right: 10px;</span><br><span class="line">            margin-top: 30px;</span><br><span class="line">            border: none;</span><br><span class="line">            background-color: deepskyblue;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!-- html是变化标签的属性 --&gt;</span><br><span class="line">    &lt;p id&#x3D;&quot;one&quot;&gt;我是大丑逼&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p id&#x3D;&quot;two&quot;&gt;我是大丑逼&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;名称：&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;text&quot; value&#x3D;&quot;我是大丑逼&quot;&gt;&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;button id&#x3D;&quot;four&quot;&gt;改变&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;button id&#x3D;&quot;five&quot;&gt;变化标签&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;button id&#x3D;&quot;six&quot;&gt;改val&lt;&#x2F;button&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="attr-改变元素属性"><a href="#attr-改变元素属性" class="headerlink" title="attr()改变元素属性"></a>attr()改变元素属性</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;attr()&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.staticfile.org&#x2F;jquery&#x2F;1.10.2&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        &#x2F;&#x2F; 改变单个attr元素</span><br><span class="line">        $(document).ready(function()&#123;</span><br><span class="line">          $(&#39;button&#39;).click(function()&#123;</span><br><span class="line">            $(&#39;#one&#39;).attr(&#39;href&#39;,&#39;www.baidu.com&#39;)</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">        &#x2F;&#x2F;改变多个attr元素</span><br><span class="line">        &#x2F;*$(document).ready(function()&#123;</span><br><span class="line">            $(&#39;button&#39;).click(function()&#123;</span><br><span class="line">                $(&#39;#one&#39;).attr(&#123;</span><br><span class="line">                   &#39;href&#39;:&#39;www.baidu.com&#39;,</span><br><span class="line">                   &#39;title&#39;:&#39;我是百度&#39;</span><br><span class="line">                &#125;);</span><br><span class="line">                var title &#x3D; $(&#39;#one&#39;).attr(&#39;title&#39;);</span><br><span class="line">                $(&#39;#one&#39;).html(title);</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;);*&#x2F;</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;a href&#x3D;&quot;www.hao123.com&quot; id&#x3D;&quot;one&quot;&gt;我是网页&lt;&#x2F;a&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;button&gt;我是按钮&lt;&#x2F;button&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
                 
             </div>
             <hr/>
@@ -433,7 +428,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/02/01/jquery2/">http://example.com/2021/02/01/jquery2/</a>
+                    <a href="http://example.com/2021/02/04/jquery4/">http://example.com/2021/02/04/jquery4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -642,17 +637,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/02/02/jquery3/">
+                <a href="/2021/02/04/jquery4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.png" class="responsive-img" alt="获取内容和属性">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="改变内容和属性">
                         
-                        <span class="card-title">获取内容和属性</span>
+                        <span class="card-title">改变内容和属性</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -662,9 +658,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -677,6 +673,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -695,13 +692,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/27/jquery%E5%B0%BA%E5%AF%B8/">
+                <a href="/2021/02/02/jquery3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="jquery 尺寸">
+                        <img src="/medias/featureimages/6.png" class="responsive-img" alt="获取内容和属性">
                         
-                        <span class="card-title">jquery 尺寸</span>
+                        <span class="card-title">获取内容和属性</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -712,7 +709,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-02
                             </span>
                         <span class="publish-author">
                             
